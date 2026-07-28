@@ -1,0 +1,45 @@
+{
+  "recordType": "postcode_price_matrix",
+  "observedAt": "2026-07-28T20:31:44.957Z",
+  "chainKey": "lieferando:burgermeister",
+  "chainName": "Burgermeister",
+  "canonicalProductId": "de-menu-v3:77c75ffb312ff5c8a9a65dac",
+  "comparableProductId": "de-menu-v3:e0f4f0d4ace60fde53c95650",
+  "canonicalName": "hamburger",
+  "postalCodeCount": 2,
+  "branchCount": 1,
+  "priceByPostalCode": {
+    "10115": {
+      "postalCode": "10115",
+      "branchCount": 1,
+      "observationCount": 1,
+      "minPrice": 7.1,
+      "averagePrice": 7.1,
+      "maxPrice": 7.1,
+      "branches": [
+        {
+          "restaurantName": "Burgermeister Eberswalder",
+          "price": 7.1
+        }
+      ]
+    },
+    "10435": {
+      "postalCode": "10435",
+      "branchCount": 1,
+      "observationCount": 1,
+      "minPrice": 7.1,
+      "averagePrice": 7.1,
+      "maxPrice": 7.1,
+      "branches": [
+        {
+          "restaurantName": "Burgermeister Eberswalder",
+          "price": 7.1
+        }
+      ]
+    }
+  },
+  "lowestPrice": 7.1,
+  "highestPrice": 7.1,
+  "priceSpread": 0,
+  "priceSpreadPercent": 0
+}

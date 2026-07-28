@@ -1,0 +1,33 @@
+{
+  "recordType": "run_summary",
+  "observedAt": "2026-07-28T12:27:40.624Z",
+  "completedAt": "2026-07-28T12:29:09.422Z",
+  "status": "healthy",
+  "expectedPostalCodes": [
+    "10115"
+  ],
+  "resolvedPostalCodes": [
+    "10115"
+  ],
+  "requestedRestaurantLimit": 2,
+  "discoveredRestaurantCount": 2,
+  "scrapedRestaurantCount": 2,
+  "menuItemCount": 79,
+  "unavailableItemCount": 7,
+  "matrixRowCount": 72,
+  "crossPostcodeMatrixRowCount": 0,
+  "inflationSummaryCount": 2,
+  "failedRequestCount": 0,
+  "failedRequestRate": 0,
+  "retriedRequestCount": 0,
+  "totalRetryCount": 0,
+  "retryRate": 0,
+  "nullPriceRate": 0,
+  "cuisineCoverage": 1,
+  "averageMenuItemsPerRestaurant": 39.5,
+  "smallMenuRestaurantCount": 0,
+  "issues": [],
+  "failures": [],
+  "chargedResultCount": 79,
+  "stoppedBySpendingLimit": false
+}

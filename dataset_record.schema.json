@@ -1,0 +1,393 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/kamerozkan/german-delivery-menu-price-intelligence-sample/dataset_record.schema.json",
+  "title": "German Delivery Menu Price Intelligence dataset record",
+  "description": "Consumer schema for restaurant, menu item, postcode matrix, menu inflation, and run summary rows.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/restaurant"
+    },
+    {
+      "$ref": "#/definitions/menuItem"
+    },
+    {
+      "$ref": "#/definitions/postcodeMatrix"
+    },
+    {
+      "$ref": "#/definitions/menuInflation"
+    },
+    {
+      "$ref": "#/definitions/runSummary"
+    }
+  ],
+  "definitions": {
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "base": {
+      "type": "object",
+      "required": [
+        "recordType",
+        "observedAt"
+      ],
+      "properties": {
+        "recordType": {
+          "type": "string"
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "restaurant": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "recordType",
+            "restaurantName"
+          ],
+          "properties": {
+            "recordType": {
+              "const": "restaurant"
+            },
+            "searchPostalCode": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[0-9]{5}$"
+            },
+            "restaurantName": {
+              "type": "string"
+            },
+            "restaurantUrl": {
+              "type": "string",
+              "format": "uri"
+            },
+            "chainKey": {
+              "type": "string"
+            },
+            "deliveryFee": {
+              "$ref": "#/definitions/nullableNumber"
+            },
+            "minimumOrder": {
+              "$ref": "#/definitions/nullableNumber"
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "menuItem": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "recordType",
+            "searchPostalCode",
+            "restaurantName",
+            "productName",
+            "price",
+            "isAvailable"
+          ],
+          "properties": {
+            "recordType": {
+              "const": "menu_item"
+            },
+            "searchPostalCode": {
+              "type": "string",
+              "pattern": "^[0-9]{5}$"
+            },
+            "restaurantName": {
+              "type": "string"
+            },
+            "productName": {
+              "type": "string"
+            },
+            "canonicalName": {
+              "type": "string"
+            },
+            "canonicalProductId": {
+              "type": "string"
+            },
+            "comparableProductId": {
+              "type": "string"
+            },
+            "price": {
+              "$ref": "#/definitions/nullableNumber"
+            },
+            "priceCurrency": {
+              "type": "string"
+            },
+            "isAvailable": {
+              "type": "boolean"
+            },
+            "priceChange90d": {
+              "$ref": "#/definitions/nullableNumber"
+            },
+            "priceChangePercent90d": {
+              "$ref": "#/definitions/nullableNumber"
+            },
+            "priceHistory90d": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "observedAt",
+                  "price"
+                ],
+                "properties": {
+                  "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "price": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": true
+              }
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "postcodeCell": {
+      "type": "object",
+      "required": [
+        "postalCode",
+        "branchCount",
+        "observationCount",
+        "minPrice",
+        "averagePrice",
+        "maxPrice",
+        "branches"
+      ],
+      "properties": {
+        "postalCode": {
+          "type": "string",
+          "pattern": "^[0-9]{5}$"
+        },
+        "branchCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observationCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minPrice": {
+          "type": "number"
+        },
+        "averagePrice": {
+          "type": "number"
+        },
+        "maxPrice": {
+          "type": "number"
+        },
+        "branches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "restaurantName",
+              "price"
+            ],
+            "properties": {
+              "restaurantName": {
+                "type": "string"
+              },
+              "restaurantUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "price": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "postcodeMatrix": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "recordType",
+            "chainKey",
+            "comparableProductId",
+            "postalCodeCount",
+            "priceByPostalCode",
+            "lowestPrice",
+            "highestPrice",
+            "priceSpread",
+            "priceSpreadPercent"
+          ],
+          "properties": {
+            "recordType": {
+              "const": "postcode_price_matrix"
+            },
+            "chainKey": {
+              "type": "string"
+            },
+            "comparableProductId": {
+              "type": "string"
+            },
+            "postalCodeCount": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "priceByPostalCode": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/postcodeCell"
+              }
+            },
+            "lowestPrice": {
+              "type": "number"
+            },
+            "highestPrice": {
+              "type": "number"
+            },
+            "priceSpread": {
+              "type": "number"
+            },
+            "priceSpreadPercent": {
+              "$ref": "#/definitions/nullableNumber"
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "menuInflation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "recordType",
+            "restaurantName",
+            "trackedItemCount",
+            "currentComparableBasket",
+            "firstComparableBasket",
+            "menuInflation90d"
+          ],
+          "properties": {
+            "recordType": {
+              "const": "menu_inflation_summary"
+            },
+            "restaurantName": {
+              "type": "string"
+            },
+            "trackedItemCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "currentComparableBasket": {
+              "type": "number"
+            },
+            "firstComparableBasket": {
+              "type": "number"
+            },
+            "menuInflation90d": {
+              "$ref": "#/definitions/nullableNumber"
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "runSummary": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/base"
+        },
+        {
+          "type": "object",
+          "required": [
+            "recordType",
+            "completedAt",
+            "status",
+            "expectedPostalCodes",
+            "resolvedPostalCodes",
+            "failedRequestRate",
+            "retryRate",
+            "nullPriceRate",
+            "issues",
+            "failures"
+          ],
+          "properties": {
+            "recordType": {
+              "const": "run_summary"
+            },
+            "completedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "status": {
+              "enum": [
+                "healthy",
+                "degraded",
+                "failed"
+              ]
+            },
+            "expectedPostalCodes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[0-9]{5}$"
+              }
+            },
+            "resolvedPostalCodes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[0-9]{5}$"
+              }
+            },
+            "failedRequestRate": {
+              "type": "number",
+              "minimum": 0
+            },
+            "retryRate": {
+              "type": "number",
+              "minimum": 0
+            },
+            "nullPriceRate": {
+              "type": "number",
+              "minimum": 0
+            },
+            "issues": {
+              "type": "array"
+            },
+            "failures": {
+              "type": "array"
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    }
+  }
+}

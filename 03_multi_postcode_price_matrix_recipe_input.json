@@ -1,0 +1,29 @@
+{
+  "postalCodes": [
+    "10115",
+    "10435"
+  ],
+  "maxRestaurantsPerPostalCode": 2,
+  "includeMenus": true,
+  "trackPriceHistory": true,
+  "generateAnalytics": true,
+  "maxConcurrency": 3,
+  "maxRequestRetries": 3,
+  "qualityThresholds": {
+    "maxFailedRequestRate": 0.2,
+    "maxRetryRate": 0.5,
+    "maxNullPriceRate": 0.05,
+    "minCuisineCoverage": 0.8,
+    "minMenuItemsPerRestaurant": 5
+  },
+  "customProductAliases": {},
+  "failOnQualityIssues": false,
+  "sendSuccessWebhook": false,
+  "proxyConfiguration": {
+    "useApifyProxy": true,
+    "apifyProxyGroups": [
+      "RESIDENTIAL"
+    ],
+    "apifyProxyCountry": "DE"
+  }
+}

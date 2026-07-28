@@ -1,0 +1,20 @@
+{
+  "recordType": "menu_item",
+  "observedAt": "2026-07-28T12:54:55.070Z",
+  "searchPostalCode": "10115",
+  "chainName": "Burgermeister",
+  "restaurantName": "Burgermeister Eberswalder",
+  "deliveryTimeMin": 30,
+  "deliveryTimeMax": 50,
+  "deliveryFee": 2.99,
+  "minimumOrder": 10,
+  "category": "Lieferando Specials",
+  "productName": "Lieferandomeister",
+  "canonicalName": "lieferandomeister",
+  "comparableProductId": "de-menu-v3:175fde3409fc8839c0289009",
+  "normalizationVersion": "de-menu-v3",
+  "price": 10.59,
+  "isAvailable": true,
+  "priceChange90d": 0,
+  "priceChangePercent90d": 0
+}

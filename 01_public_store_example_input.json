@@ -1,0 +1,11 @@
+{
+  "failOnQualityIssues": false,
+  "generateAnalytics": true,
+  "includeMenus": true,
+  "maxRestaurantsPerPostalCode": 2,
+  "postalCodes": [
+    "10115"
+  ],
+  "sendSuccessWebhook": false,
+  "trackPriceHistory": true
+}
