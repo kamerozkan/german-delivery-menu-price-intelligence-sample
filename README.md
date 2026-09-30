@@ -1,6 +1,10 @@
 **Live Actor and maintained API: [Run German Delivery Menu Price Intelligence on Apify](https://apify.com/kamerozkan/german-delivery-menu-price-intelligence)**
 
-# German Delivery Menu and Price Intelligence API Samples
+# Lieferando Menu Scraper - Restaurant Menus, Prices & Delivery: Samples
+
+Scrape restaurant menus and dish prices from Lieferando.de, Germany's largest food delivery platform: menu, price, delivery fee and minimum order per German postcode, 90-day price history, postcode price matrix and a run-over-run menu change digest. Unofficial, independent tool.
+
+[Run Lieferando Menu Scraper - Restaurant Menus, Prices & Delivery on Apify](https://apify.com/kamerozkan/german-delivery-menu-price-intelligence)
 
 ![Actor](https://img.shields.io/badge/Apify_Actor-public-00a67e)
 ![Latest build](https://img.shields.io/badge/latest_build-1.0.13-2563eb)

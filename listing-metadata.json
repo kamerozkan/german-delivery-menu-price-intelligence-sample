@@ -1,0 +1,15 @@
+{
+  "id": "dHYh0fcMQaXw4LS29",
+  "name": "german-delivery-menu-price-intelligence",
+  "title": "Lieferando Menu Scraper - Restaurant Menus, Prices & Delivery",
+  "description": "Scrape restaurant menus and dish prices from Lieferando.de, Germany's largest food delivery platform: menu, price, delivery fee and minimum order per German postcode, 90-day price history, postcode price matrix and a run-over-run menu change digest. Unofficial, independent tool.",
+  "seoTitle": "Lieferando Menu Scraper - Restaurant Prices API",
+  "seoDescription": "Scrape Lieferando restaurant menus, dish prices, delivery fees and minimum orders by German postcode. Track menu changes and price history across runs.",
+  "isPublic": true,
+  "url": "https://apify.com/kamerozkan/german-delivery-menu-price-intelligence",
+  "checkedAt": "2026-09-30",
+  "changeScope": "listing metadata and sample documentation only",
+  "runtimeChanged": false,
+  "schemasChanged": false,
+  "examplesRegenerated": false
+}
