@@ -2,11 +2,11 @@
   "checkedAt": "2026-10-06",
   "actorId": "dHYh0fcMQaXw4LS29",
   "publishedLatestBuild": {
-    "id": "SvjU4pA54KwVvQ7fa",
-    "buildNumber": "1.0.19",
+    "id": "eE9sRgiSUvumj6lg7",
+    "buildNumber": "1.0.20",
     "status": "SUCCEEDED",
-    "startedAt": "2026-10-06T17:54:13.678Z",
-    "finishedAt": "2026-10-06T17:54:59.327Z"
+    "startedAt": "2026-10-06T18:06:30.827Z",
+    "finishedAt": "2026-10-06T18:07:10.032Z"
   },
   "runtimeChanged": true,
   "change": "Preserve nonzero exit for input, crawler, storage and strict quality failures; healthy and lenient paths retained",

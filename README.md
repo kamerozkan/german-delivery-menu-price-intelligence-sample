@@ -26,7 +26,7 @@ See [`pricing-verification-2026-10-06.json`](pricing-verification-2026-10-06.jso
 
 ## October 6, 2026 publication
 
-The owner release check confirmed public `latest` build `1.0.19` (`SvjU4pA54KwVvQ7fa`), its complete frozen source hashes and unchanged protected Actor settings. This publication did not run a new scrape. Older snapshots and sample outputs below retain their original dates; they are not evidence of current source availability, customer payment or satisfaction.
+The owner release check confirmed public `latest` build `1.0.20` (`eE9sRgiSUvumj6lg7`), its complete frozen source hashes and unchanged protected Actor settings. This publication did not run a new scrape. Older snapshots and sample outputs below retain their original dates; they are not evidence of current source availability, customer payment or satisfaction.
 
 
 ## Verified live snapshot
@@ -245,3 +245,5 @@ Sample code and repository documentation are available under the [MIT License](L
 ## October 6 failure-status repair
 
 Input, crawler or storage exceptions and strict quality failures now preserve a nonzero process exit instead of being masked by a default successful shutdown. `failOnQualityIssues: false` still permits a completed run with failed or degraded quality in its summary. The caller must inspect summary quality and dataset contents. Partial records and their earlier charges can remain after a later failure. Eight author cases and eight independent cases passed with simulated SDK, crawler and storage behavior, without a live scrape. See [`lifecycle-verification-2026-10-06.json`](lifecycle-verification-2026-10-06.json).
+
+The current [`input_schema.json`](input_schema.json) includes the corrected billing field descriptions; input types, defaults and validation constraints were preserved.

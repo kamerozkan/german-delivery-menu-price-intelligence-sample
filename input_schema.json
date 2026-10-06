@@ -1,0 +1,207 @@
+{
+  "title": "Lieferando Menu & Price Intelligence input",
+  "description": "Choose German postal codes and the maximum number of restaurants to collect for each location.",
+  "type": "object",
+  "schemaVersion": 1,
+  "additionalProperties": false,
+  "properties": {
+    "postalCodes": {
+      "title": "German postal codes",
+      "type": "array",
+      "description": "Five-digit German postal codes. Each location is opened through Lieferando postcode-routed result pages. At the Free tier checked on 6 October 2026, delivered menu items, restaurant fallback rows and menu-change summaries cost $0.003 each. Matrices, inflation summaries and the run summary have no result event. Memory-based startup is separate; live Pricing is authoritative.",
+      "editor": "stringList",
+      "default": [
+        "10115"
+      ],
+      "prefill": [
+        "10115"
+      ],
+      "example": [
+        "10115",
+        "10117",
+        "10999"
+      ],
+      "maxItems": 100,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]{5}$"
+      }
+    },
+    "maxRestaurantsPerPostalCode": {
+      "title": "Restaurants per postal code",
+      "type": "integer",
+      "description": "Maximum number of unique restaurant branches collected for each postal code.",
+      "default": 2,
+      "prefill": 2,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "includeMenus": {
+      "title": "Collect full menus",
+      "type": "boolean",
+      "description": "When enabled, outputs one dataset row per menu item. Disable for a faster restaurant-list-only run.",
+      "default": true
+    },
+    "trackPriceHistory": {
+      "title": "Track 90-day price history",
+      "type": "boolean",
+      "description": "Persists item price observations in a named key-value store and adds change metrics to each menu row. Keep the same store across scheduled runs so inflation summaries and change fields build real history.",
+      "default": true
+    },
+    "generateAnalytics": {
+      "title": "Generate intelligence reports",
+      "type": "boolean",
+      "description": "Builds postcode price matrices, menu inflation summaries, CSV/JSON exports, and a visual HTML report.",
+      "default": true
+    },
+    "generateChangeDigest": {
+      "title": "Generate menu change digest",
+      "type": "boolean",
+      "description": "Compares observed restaurant menus with previous snapshots in the price-history store and writes MENU_CHANGE_DIGEST (JSON), MENU_CHANGE_DIGEST.html and MENU_CHANGE_DIGEST.txt: observed price, item, availability and delivery-term changes. Requires trackPriceHistory. Active pricing checked on 6 October 2026 has no menu-change-digest event; a successfully stored digest is marked UNPRICED_FREE. Live Pricing and OUTPUT determine billing status.",
+      "default": false
+    },
+    "maxConcurrency": {
+      "title": "Maximum concurrency",
+      "type": "integer",
+      "description": "Maximum number of browser pages processed in parallel.",
+      "default": 3,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "maxRequestRetries": {
+      "title": "Request retries",
+      "type": "integer",
+      "description": "Maximum retry count for blocked or temporarily failing Lieferando pages.",
+      "default": 3,
+      "minimum": 0,
+      "maximum": 10
+    },
+    "qualityThresholds": {
+      "title": "Quality monitoring thresholds",
+      "type": "object",
+      "description": "Thresholds used to mark the run healthy, degraded, or failed.",
+      "editor": "json",
+      "default": {
+        "maxFailedRequestRate": 0.2,
+        "maxRetryRate": 0.5,
+        "maxNullPriceRate": 0.05,
+        "minCuisineCoverage": 0.8,
+        "minMenuItemsPerRestaurant": 5
+      },
+      "properties": {
+        "maxFailedRequestRate": {
+          "title": "Maximum failed request rate",
+          "description": "Warning threshold expressed as a value from 0 to 1.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "maxRetryRate": {
+          "title": "Maximum recovered-retry rate",
+          "description": "Warning threshold for requests that succeeded only after retrying, expressed as a value from 0 to 1.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "maxNullPriceRate": {
+          "title": "Maximum null-price rate",
+          "description": "Warning threshold expressed as a value from 0 to 1.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "minCuisineCoverage": {
+          "title": "Minimum cuisine coverage",
+          "description": "Required share of restaurants with a published or inferred cuisine.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "minMenuItemsPerRestaurant": {
+          "title": "Minimum menu size",
+          "description": "Warning threshold for extracted items in each restaurant/postcode menu observation and for the overall average.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        }
+      },
+      "additionalProperties": false
+    },
+    "customProductAliases": {
+      "title": "Custom product aliases",
+      "type": "object",
+      "description": "Optional exact phrase mappings for market-specific names, for example {\"Hausrolle\":\"Signature Wrap\"}. Built-in German normalization still applies.",
+      "editor": "json",
+      "default": {},
+      "maxProperties": 500,
+      "additionalProperties": true
+    },
+    "failOnQualityIssues": {
+      "title": "Fail degraded runs",
+      "type": "boolean",
+      "description": "When enabled, marks the Actor run as failed if any quality warning or error is found.",
+      "default": false
+    },
+    "alertWebhookUrl": {
+      "title": "Alert webhook URL",
+      "type": "string",
+      "description": "Optional HTTPS endpoint that receives the run-quality summary for degraded or failed runs.",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "sendSuccessWebhook": {
+      "title": "Send healthy-run webhooks",
+      "type": "boolean",
+      "description": "Also sends the monitoring webhook when the run is healthy.",
+      "default": false
+    },
+    "proxyConfiguration": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "Defaults to a German residential Apify Proxy profile because Lieferando may block data-center IPs. The public Pricing tab checked on 6 October 2026 shows platform costs included for customers; the publisher still incurs compute and proxy costs.",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": [
+          "RESIDENTIAL"
+        ],
+        "apifyProxyCountry": "DE"
+      }
+    },
+    "restaurantUrls": {
+      "title": "Optional restaurant menu URLs",
+      "type": "array",
+      "description": "Optional direct Lieferando menu URLs. Useful for testing or tracking a fixed competitor set.",
+      "editor": "requestListSources",
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "url": {
+            "title": "Lieferando menu URL",
+            "description": "Direct URL of one Lieferando restaurant menu.",
+            "type": "string",
+            "pattern": "^https:\\/\\/www\\.lieferando\\.de\\/(?:[a-z]{2}\\/)?menu\\/.+"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "postalCodes",
+    "maxRestaurantsPerPostalCode",
+    "includeMenus",
+    "trackPriceHistory",
+    "generateAnalytics",
+    "maxConcurrency",
+    "maxRequestRetries",
+    "qualityThresholds",
+    "customProductAliases",
+    "failOnQualityIssues",
+    "sendSuccessWebhook"
+  ]
+}

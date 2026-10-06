@@ -10,7 +10,7 @@
   "checkedAt": "2026-10-06",
   "changeScope": "Current billing documentation and verified publication",
   "runtimeChanged": true,
-  "schemasChanged": false,
+  "schemasChanged": true,
   "examplesRegenerated": false,
   "pricingDocumentationCheckedAt": "2026-10-06",
   "pricingDocumentationChangeScope": "Current billing explanation; actual price configuration unchanged",
@@ -18,16 +18,19 @@
   "pricingVerificationFile": "pricing-verification-2026-10-06.json",
   "maintenanceCheckedAt": "2026-10-06",
   "publishedLatestBuild": {
-    "id": "SvjU4pA54KwVvQ7fa",
-    "buildNumber": "1.0.19",
+    "id": "eE9sRgiSUvumj6lg7",
+    "buildNumber": "1.0.20",
     "status": "SUCCEEDED",
-    "startedAt": "2026-10-06T17:54:13.678Z",
-    "finishedAt": "2026-10-06T17:54:59.327Z"
+    "startedAt": "2026-10-06T18:06:30.827Z",
+    "finishedAt": "2026-10-06T18:07:10.032Z"
   },
   "maintenanceEvidenceFile": "pricing-verification-2026-10-06.json",
   "pricingConfigurationChanged": false,
   "storePublicationBlocked": false,
   "publicationScope": "Verified cloud release and linked GitHub sample",
   "maintenanceChangeScope": "Billing documentation and runtime failure-status repair",
-  "lifecycleEvidenceFile": "lifecycle-verification-2026-10-06.json"
+  "lifecycleEvidenceFile": "lifecycle-verification-2026-10-06.json",
+  "inputSchemaDocumentationChanged": true,
+  "inputSchemaConstraintsChanged": false,
+  "inputSchemaFile": "input_schema.json"
 }
