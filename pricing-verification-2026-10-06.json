@@ -1,0 +1,95 @@
+{
+  "checkedAtUtc": "2026-10-06T17:44:37.629665+00:00",
+  "actorId": "dHYh0fcMQaXw4LS29",
+  "actorUrl": "https://apify.com/kamerozkan/german-delivery-menu-price-intelligence",
+  "source": "authenticated GET of saved active pricing and latest frozen build; no execution",
+  "checkedLatestBuild": {
+    "buildId": "mckoMEHPrcJmrcbcm",
+    "finishedAt": "2026-09-02T07:50:38.389Z",
+    "buildNumberInt": 10000018,
+    "buildNumber": "1.0.18"
+  },
+  "activePricing": {
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "minimalMaxTotalChargeUsd": null,
+    "startedAt": "2026-09-16T00:00:00.000Z",
+    "pricingPerEvent": {
+      "actorChargeEvents": {
+        "apify-actor-start": {
+          "eventTitle": "Actor Start",
+          "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+          "isOneTimeEvent": true,
+          "eventPriceUsd": 0.005
+        },
+        "result-emitted": {
+          "eventTitle": "Restaurant or menu result",
+          "eventDescription": "One normalized restaurant or menu-item record written to the dataset. Analytics and run summaries are free.",
+          "isOneTimeEvent": false,
+          "eventTieredPricingUsd": {
+            "FREE": {
+              "tieredEventPriceUsd": 0.003
+            },
+            "BRONZE": {
+              "tieredEventPriceUsd": 0.0027
+            },
+            "SILVER": {
+              "tieredEventPriceUsd": 0.0024
+            },
+            "GOLD": {
+              "tieredEventPriceUsd": 0.0021
+            },
+            "PLATINUM": {
+              "tieredEventPriceUsd": 0.0021
+            },
+            "DIAMOND": {
+              "tieredEventPriceUsd": 0.0021
+            }
+          },
+          "isPrimaryEvent": true
+        }
+      }
+    },
+    "createdAt": "2026-09-01T19:21:56.920Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-01T19:22:17.137Z",
+    "notifiedAboutChangeAt": "2026-09-16T00:05:56.370Z"
+  },
+  "pricingConfigurationChanged": false,
+  "newActorRuns": 0,
+  "newSourceObservations": false,
+  "newCustomerPaymentOrSatisfactionProven": false,
+  "historicalSampleFilesChanged": false,
+  "proposedReadmeSha256": "0a191b36577728d47573b7e3685852f285b4de35fcecb8aaa18a06261dbc35c4",
+  "savedActivePricingHash": "818cb3f366e2c4e7550bbc9f9e3e3bd9ca28c3d49fd6e98266bb1230f9bc6f80",
+  "limits": [
+    "This record verifies billing configuration and source placement; it does not independently authenticate a customer output or prove source availability",
+    "Any subsequent publication build and public propagation must be verified separately"
+  ],
+  "notes": "Delivered menu items, restaurant fallback rows and menu-change summary rows cost $0.003 each. Postcode matrices, inflation summaries and the run summary have no result event. The active pricing has no `menu-change-digest` event; a successfully stored digest is marked `UNPRICED_FREE`. Startup is $0.005 per GB, minimum one event; default 2 GB adds $0.01. For 400 billable rows, event charges are $1.21 per run. A later failure or abort can retain earlier delivered and charged rows. The current Pricing tab shows platform costs included; the publisher still incurs compute and proxy costs. Row limits and charge limits do not prove complete menus or cap the publisher costs.",
+  "publishedLatestBuild": {
+    "id": "SvjU4pA54KwVvQ7fa",
+    "buildNumber": "1.0.19",
+    "status": "SUCCEEDED",
+    "startedAt": "2026-10-06T17:54:13.678Z",
+    "finishedAt": "2026-10-06T17:54:59.327Z"
+  },
+  "cloudPublicationCompletedAtUtc": "2026-10-06T18:01:00.230879+00:00",
+  "publicLatestVerified": true,
+  "allFrozenSourceHashesVerified": true,
+  "sourceFileCountVerified": 34,
+  "sourceChangedFiles": [
+    "README.md",
+    "src/main.ts"
+  ],
+  "publishedReadmeSha256": "8692f6801bc386e17161bc523a93bfcb78f417e906458a9034e58af9cb823c79",
+  "protectedMetadataUnchanged": true,
+  "envUnchanged": true,
+  "cloudReleaseEvidenceSha256": "3ffd62e937cb40b204cfaa0a9da6d9b0096db857f77b1b60e084ab187ef24a19",
+  "cloudSourceManifestSha256": "a4d76ae8b5cf289fcb24b46ea01012897ce41fca475b54e3ff7c9feba7098afc",
+  "cloudReadmeRepaired": true,
+  "storePublicationBlocked": false,
+  "publicationScope": "Verified cloud release and linked GitHub sample",
+  "combinedReleaseRuntimeChanged": true,
+  "lifecycleEvidenceFile": "lifecycle-verification-2026-10-06.json"
+}

@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-06",
+  "actorId": "dHYh0fcMQaXw4LS29",
+  "publishedLatestBuild": {
+    "id": "SvjU4pA54KwVvQ7fa",
+    "buildNumber": "1.0.19",
+    "status": "SUCCEEDED",
+    "startedAt": "2026-10-06T17:54:13.678Z",
+    "finishedAt": "2026-10-06T17:54:59.327Z"
+  },
+  "runtimeChanged": true,
+  "change": "Preserve nonzero exit for input, crawler, storage and strict quality failures; healthy and lenient paths retained",
+  "changedRuntimeFile": "src/main.ts",
+  "publishedRuntimeSha256": "946c303f84e4383cf55edaf18397dfec8c79ddbfc4c39898115101b9106e141b",
+  "authorSyntheticCases": 8,
+  "authorMainExecutions": 16,
+  "independentSyntheticCases": 8,
+  "independentMainExecutions": 16,
+  "authorEvidenceSha256": "00723d7be2c53600913c2cca4f3d5aa6418bdaf64d508f5dfb2319703ae93a8a",
+  "independentEvidenceSha256": "2254a7ef66226f4df80b8b5d5c0d4a3fc9bb82d874739de593c6b0cfb649e01e",
+  "networkCalls": 0,
+  "newActorRuns": 0,
+  "pricingConfigurationChanged": false,
+  "limits": [
+    "Synthetic SDK, crawler and storage fixtures validate lifecycle branches, not live source availability",
+    "Partial records and prior charged result events can remain after failure; no automatic refund was added",
+    "A successful platform run alone does not prove a complete menu or useful customer output"
+  ]
+}

@@ -15,6 +15,20 @@ Turn postcode-routed Lieferando restaurant listings into normalized menu rows, d
 
 > **Independent and unofficial.** This project is not affiliated with, endorsed by, sponsored by, or an official integration of Lieferando or Just Eat Takeaway.com. Platform names identify the public data source only.
 
+
+## Current billing checked on October 6, 2026
+
+Checked against the saved active Actor pricing on October 6, 2026. These are Free-tier event rates; use the [Pricing tab](https://apify.com/kamerozkan/german-delivery-menu-price-intelligence/pricing) for your plan and memory allocation. Historical samples below keep their original dates and do not prove current source availability.
+
+Delivered menu items, restaurant fallback rows and menu-change summary rows cost $0.003 each. Postcode matrices, inflation summaries and the run summary have no result event. The active pricing has no `menu-change-digest` event; a successfully stored digest is marked `UNPRICED_FREE`. Startup is $0.005 per GB, minimum one event; default 2 GB adds $0.01. For 400 billable rows, event charges are $1.21 per run. A later failure or abort can retain earlier delivered and charged rows. The current Pricing tab shows platform costs included; the publisher still incurs compute and proxy costs. Row limits and charge limits do not prove complete menus or cap the publisher costs.
+
+See [`pricing-verification-2026-10-06.json`](pricing-verification-2026-10-06.json) for the saved event configuration and scope.
+
+## October 6, 2026 publication
+
+The owner release check confirmed public `latest` build `1.0.19` (`SvjU4pA54KwVvQ7fa`), its complete frozen source hashes and unchanged protected Actor settings. This publication did not run a new scrape. Older snapshots and sample outputs below retain their original dates; they are not evidence of current source availability, customer payment or satisfaction.
+
+
 ## Verified live snapshot
 
 Audited through the public Store/API and the authenticated owner account on 2026-07-28.
@@ -217,7 +231,7 @@ Use [`dataset_record.schema.json`](dataset_record.schema.json) to validate consu
 - The Actor reads publicly displayed Lieferando restaurant and menu information. It does not provide an official Lieferando API.
 - Markup, access controls, availability, menu contents, prices, fees, offers, ratings, and delivery estimates can change.
 - Results are observations from requested postcodes and restaurant limits. They are not proof of nationwide completeness or real-time coverage.
-- Lieferando can block data-center traffic. The current input defaults to a German residential Apify Proxy profile, which Apify bills separately.
+- Lieferando can block data-center traffic. The current input defaults to a German residential Apify Proxy profile. The current Pricing tab shows platform costs included for customers; the publisher still incurs those resource costs.
 - A restaurant can serve multiple search postcodes. Branch count and postcode count describe the observed run, not the platform's full service area.
 - Comparable-product matching is deterministic but can still require review. Size, quantity, dietary, and variant attributes are included to reduce false matches.
 - A first run does not prove a price change. Retain the same named key-value store across later runs to build history.
@@ -227,3 +241,7 @@ Use [`dataset_record.schema.json`](dataset_record.schema.json) to validate consu
 ## License
 
 Sample code and repository documentation are available under the [MIT License](LICENSE). Source data remains subject to its original rights, terms, and applicable law.
+
+## October 6 failure-status repair
+
+Input, crawler or storage exceptions and strict quality failures now preserve a nonzero process exit instead of being masked by a default successful shutdown. `failOnQualityIssues: false` still permits a completed run with failed or degraded quality in its summary. The caller must inspect summary quality and dataset contents. Partial records and their earlier charges can remain after a later failure. Eight author cases and eight independent cases passed with simulated SDK, crawler and storage behavior, without a live scrape. See [`lifecycle-verification-2026-10-06.json`](lifecycle-verification-2026-10-06.json).
