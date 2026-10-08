@@ -7,8 +7,8 @@ Scrape restaurant menus and dish prices from Lieferando.de, Germany's largest fo
 [Run Lieferando Menu Scraper - Restaurant Menus, Prices & Delivery on Apify](https://apify.com/kamerozkan/german-delivery-menu-price-intelligence)
 
 ![Actor](https://img.shields.io/badge/Apify_Actor-public-00a67e)
-![Latest build](https://img.shields.io/badge/latest_build-1.0.13-2563eb)
-![Sample evidence](https://img.shields.io/badge/sample_run-verified-success)
+![Latest build](https://img.shields.io/badge/latest_build-1.0.22-2563eb)
+![Sample evidence](https://img.shields.io/badge/owner_sample-capped-f59e0b)
 ![Schema](https://img.shields.io/badge/JSON_Schema-draft--07-f59e0b)
 
 Turn postcode-routed Lieferando restaurant listings into normalized menu rows, delivery economics, comparable product IDs, cross-postcode price matrices, 90-day history, and run-quality records.
@@ -16,20 +16,41 @@ Turn postcode-routed Lieferando restaurant listings into normalized menu rows, d
 > **Independent and unofficial.** This project is not affiliated with, endorsed by, sponsored by, or an official integration of Lieferando or Just Eat Takeaway.com. Platform names identify the public data source only.
 
 
-## Current billing checked on October 6, 2026
+## Current billing checked on October 8, 2026
 
-Checked against the saved active Actor pricing on October 6, 2026. These are Free-tier event rates; use the [Pricing tab](https://apify.com/kamerozkan/german-delivery-menu-price-intelligence/pricing) for your plan and memory allocation. Historical samples below keep their original dates and do not prove current source availability.
+The October 8 release retained the active pricing previously recorded on October 6, 2026. These are Free-tier event rates; use the [Pricing tab](https://apify.com/kamerozkan/german-delivery-menu-price-intelligence/pricing) for your plan and memory allocation. Historical samples below keep their original dates and do not prove current source availability.
 
 Delivered menu items, restaurant fallback rows and menu-change summary rows cost $0.003 each. Postcode matrices, inflation summaries and the run summary have no result event. The active pricing has no `menu-change-digest` event; a successfully stored digest is marked `UNPRICED_FREE`. Startup is $0.005 per GB, minimum one event; default 2 GB adds $0.01. For 400 billable rows, event charges are $1.21 per run. A later failure or abort can retain earlier delivered and charged rows. The current Pricing tab shows platform costs included; the publisher still incurs compute and proxy costs. Row limits and charge limits do not prove complete menus or cap the publisher costs.
 
 See [`pricing-verification-2026-10-06.json`](pricing-verification-2026-10-06.json) for the saved event configuration and scope.
+
+## October 8, 2026 publication and bounded owner output
+
+Public `latest` is `1.0.22`, build `TCUjgwTwpOlwz4T7J`. All 34 frozen source hashes and protected settings were verified. Event prices, retry defaults, proxy settings, input constraints and memory defaults were preserved. Initial navigation now waits for `domcontentloaded`, followed by the required visible content checks.
+
+A dated owner acceptance collected 107 menu rows from Sushi Yana plus one free run-summary row on October 8. Every delivered row has a product name, source identity and finite EUR price; observed prices ranged from EUR 2.00 to EUR 74.95. No failed source request, retry or missing price was recorded. This is one restaurant's bounded snapshot, not a complete menu or a general availability guarantee.
+
+The run reached its USD 0.30 charge cap. Its summary is `degraded` with `SPENDING_LIMIT_REACHED`; platform status is **`FAILED`** because `failOnQualityIssues: true` deliberately rejects non-healthy quality. The 107 delivered records remain useful within that incomplete scope. Do not label this run fully successful or infer complete requested coverage from its row count.
+
+The event counts are 107 result events and two automatic startup events. Both owner accounted event counts are zero, so this is not customer revenue or a customer profit result. The finalized owner resource cost was USD 0.0501465; one owner test does not prove customer margins, satisfaction or future prices.
+
+| Dated artifact | Scope |
+|---|---|
+| [`10_2026-10-08_bounded_direct_menu_input.json`](10_2026-10-08_bounded_direct_menu_input.json) | Exact owner input for one direct menu, history and analytics disabled |
+| [`11_2026-10-08_bounded_menu_sample.json`](11_2026-10-08_bounded_menu_sample.json) | Three field-preserving menu-row projections; not the full 107-row dataset |
+| [`12_2026-10-08_bounded_run_summary.json`](12_2026-10-08_bounded_run_summary.json) | Exact free summary retaining the cap warning and degraded quality |
+| [`runtime-verification-2026-10-08.json`](runtime-verification-2026-10-08.json) | Build, owner provenance, checks, event counts, costs and limitations |
+
+The run options were build `1.0.22`, 2 GB RAM, timeout 180 seconds and `maxTotalChargeUsd: 0.30`. The charge cap is a run option, not an input field or a publisher resource-cost cap. Changing `failOnQualityIssues` can change the platform exit behavior; always inspect the quality summary.
+
+Nine `priceText` values contain two displayed amounts. `price` retains the first displayed amount and the original text retains both; list-price, promotion and checkout semantics were not independently authenticated. One product name and price occurs in two categories with distinct source IDs, so 107 identities do not mean 107 unique dishes. Direct-menu delivery fields are mostly null, and observed zero rating/review values should not be treated as independently confirmed absence.
 
 ## October 6, 2026 publication
 
 The owner release check confirmed public `latest` build `1.0.20` (`eE9sRgiSUvumj6lg7`), its complete frozen source hashes and unchanged protected Actor settings. This publication did not run a new scrape. Older snapshots and sample outputs below retain their original dates; they are not evidence of current source availability, customer payment or satisfaction.
 
 
-## Verified live snapshot
+## Historical July 28, 2026 snapshot
 
 Audited through the public Store/API and the authenticated owner account on 2026-07-28.
 
@@ -38,7 +59,7 @@ Audited through the public Store/API and the authenticated owner account on 2026
 | Store slug | `kamerozkan/german-delivery-menu-price-intelligence` |
 | Actor ID | `dHYh0fcMQaXw4LS29` |
 | Visibility | Public |
-| Current `latest` build | `1.0.13`, build ID `xwV0cEjYP2mAMH8Os`, succeeded 2026-07-28 20:54:19 UTC |
+| `latest` at the July 28 audit | `1.0.13`, build ID `xwV0cEjYP2mAMH8Os`, succeeded 2026-07-28 20:54:19 UTC |
 | Public Store Examples | Exactly 1 |
 | Public Example | [`monitor-berlin-restaurant-menu-prices`](https://apify.com/kamerozkan/german-delivery-menu-price-intelligence/examples/monitor-berlin-restaurant-menu-prices), Task ID `rMqmZE2BnOWQvaABo` |
 | Public Example run count | 3 |
@@ -47,7 +68,7 @@ Audited through the public Store/API and the authenticated owner account on 2026
 | Verified Example dataset | `hDVcOZ11Mfyt2hIMR`, 158 rows |
 | Actor activity at audit time | 13 builds, 14 runs, 2 users; 2 successful public runs in the previous 30 days |
 
-The current build is `1.0.13`, while the latest audited successful public Example run used build `1.0.11`. Output sample 1 is a privacy-minimized projection of the first visible row in the audited Example dataset. Samples 2 and 3 are privacy-minimized projections of real live-run records published in the Actor's current Store README.
+At the July 28 audit, `latest` was `1.0.13`, while the audited successful public Example run used build `1.0.11`. Output sample 1 is a privacy-minimized projection of the first visible row in the audited Example dataset. Samples 2 and 3 are privacy-minimized projections of real live-run records published in the Actor's Store README as observed at that historical audit.
 
 ## Public and recipe inputs
 
@@ -247,3 +268,19 @@ Sample code and repository documentation are available under the [MIT License](L
 Input, crawler or storage exceptions and strict quality failures now preserve a nonzero process exit instead of being masked by a default successful shutdown. `failOnQualityIssues: false` still permits a completed run with failed or degraded quality in its summary. The caller must inspect summary quality and dataset contents. Partial records and their earlier charges can remain after a later failure. Eight author cases and eight independent cases passed with simulated SDK, crawler and storage behavior, without a live scrape. See [`lifecycle-verification-2026-10-06.json`](lifecycle-verification-2026-10-06.json).
 
 The current [`input_schema.json`](input_schema.json) includes the corrected billing field descriptions; input types, defaults and validation constraints were preserved.
+
+## October 8, 2026 runtime checks
+
+TypeScript build, thirteen synthetic regression scenarios and three additional navigation scenarios passed. Independent actual local Chromium/Crawlee checks confirmed resource blocking, navigation readiness and rejection of missing menu content. Those fixtures do not prove real source reliability. The single dated source acceptance is documented above with its spending-cap degradation and owner-only accounting. See [`cost-control-verification-2026-10-08.json`](cost-control-verification-2026-10-08.json) and [`runtime-verification-2026-10-08.json`](runtime-verification-2026-10-08.json).
+
+## Resource controls and direct menu requests
+
+For API calls with `restaurantUrls` and no `postalCodes` field, only the supplied menus are requested. Calls with neither field retain the default Berlin postcode. In the Console, set `postalCodes` to `[]` for a direct-only run because the form may include its default postcode. Explicitly supplied postcodes still add their requested postcode searches.
+
+The browser blocks image, font and media URL patterns to reduce residential-proxy traffic. Documents, CSS, JavaScript and API responses remain available for menu hydration. Published image URLs still come from the page; matching image resources are not downloaded. This is an optimization, not a guarantee of source access or a publisher cost cap.
+
+Initial browser navigation waits for `domcontentloaded`, then the existing visible heading, menu-list or restaurant-card checks and menu stabilization determine extraction readiness. A slow remaining page asset cannot by itself hold navigation until the full `load` event. Missing required content still fails the request; this does not bypass a block or prove current source access.
+
+When no result event fits the remaining charge limit, the Actor skips browser crawling. If the limit is reached during collection, it stops dispatching new requests while already running requests can finish. No extra result event is added. The run summary includes `stoppedBySpendingLimit: true`, the `SPENDING_LIMIT_REACHED` warning, and an incomplete-coverage warning instead of presenting a capped run as healthy. Previously delivered rows and the automatic memory-based startup charge can remain charged.
+
+The history precheck prevents writes after a known exhausted result limit. It does not make concurrent history and result delivery atomic; in-flight work and a failure can retain earlier history or delivered rows. Publisher profitability depends on actual runtime, residential-proxy traffic, delivered charge events and the user pricing tier. These controls do not guarantee a nonnegative margin.

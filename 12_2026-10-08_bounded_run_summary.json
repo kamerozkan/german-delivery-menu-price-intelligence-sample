@@ -1,0 +1,44 @@
+{
+  "recordType": "run_summary",
+  "observedAt": "2026-10-08T20:15:31.005Z",
+  "completedAt": "2026-10-08T20:17:17.405Z",
+  "status": "degraded",
+  "expectedPostalCodes": [],
+  "resolvedPostalCodes": [],
+  "requestedRestaurantLimit": 1,
+  "discoveredRestaurantCount": 1,
+  "scrapedRestaurantCount": 1,
+  "menuItemCount": 107,
+  "unavailableItemCount": 0,
+  "matrixRowCount": 0,
+  "crossPostcodeMatrixRowCount": 0,
+  "inflationSummaryCount": 0,
+  "failedRequestCount": 0,
+  "failedRequestRate": 0,
+  "retriedRequestCount": 0,
+  "totalRetryCount": 0,
+  "retryRate": 0,
+  "nullPriceRate": 0,
+  "cuisineCoverage": 1,
+  "averageMenuItemsPerRestaurant": 107,
+  "smallMenuRestaurantCount": 0,
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "SPENDING_LIMIT_REACHED",
+      "message": "Collection stopped at the result spending limit; requested coverage can be incomplete."
+    }
+  ],
+  "failures": [],
+  "chargedResultCount": 107,
+  "stoppedBySpendingLimit": true,
+  "changeSummaryCount": 0,
+  "comparedRestaurantCount": 0,
+  "changeDigest": {
+    "requested": false,
+    "status": "NOT_REQUESTED",
+    "event": "menu-change-digest",
+    "billing": null,
+    "keys": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status": "PUBLIC_LATEST_1.0.22_VERIFIED",
+  "testScenarios": 13,
+  "actualCompiledMainExecutions": 26,
+  "pricingChanged": false,
+  "customerOutputOrMarginVerified": false,
+  "sourceRequestCallsInSyntheticQA": 0,
+  "preparedAtUtc": "2026-10-08T20:05:04.949144+00:00",
+  "limitations": [
+    "SDK, browser, DOM and storage were simulated for these regression tests.",
+    "Local browser resource interception verification is separate; it does not prove Lieferando hydration.",
+    "Owner test costs and hypothetical event-rate models are not customer revenue."
+  ],
+  "navigationFollowup": {
+    "status": "PUBLIC_LATEST_1.0.22_VERIFIED",
+    "buildCompile": "PASS",
+    "additionalSyntheticScenarios": 3,
+    "additionalActualMainExecutions": 6,
+    "change": "Initial navigation domcontentloaded; visible h1/menu-list/search-card readiness and stabilization retained.",
+    "sourceAccessOrUsefulOutputProved": "107dated useful owner menu rows from one source restaurant; incomplete capped coverage.",
+    "currentRootCandidateAttempt": {
+      "buildNumber": "1.0.21",
+      "status": "FAILED",
+      "menuRows": 0,
+      "resultEvents": 0,
+      "failure": "Initial page.goto waited for load and timed out45000ms; no challenge was proved."
+    },
+    "agentCloudMutations": 0,
+    "independentLocalBrowserProbe": {
+      "status": "PASS",
+      "cases": 3,
+      "scope": "Actual local Chromium+Crawlee synthetic site; delayed ancillary load, hydrated selectors and missingmenu rejection. No real source/cloud traffic."
+    },
+    "latestOwnerAcceptance": {
+      "platformStatus": "FAILED",
+      "qualityStatus": "degraded",
+      "onlyIssue": "SPENDING_LIMIT_REACHED",
+      "menuRows": 107,
+      "resultEvents": 107,
+      "ownerAccountedResultEvents": 0
+    }
+  },
+  "publicationEvidenceFile": "runtime-verification-2026-10-08.json",
+  "newCloudRunsByThisSubagent": 0,
+  "newCloudBuildsByThisSubagent": 0,
+  "rootCloudCandidateRuns": 2
+}

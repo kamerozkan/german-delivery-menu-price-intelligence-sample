@@ -1,0 +1,151 @@
+{
+  "status": "PUBLIC_LATEST_1.0.22_VERIFIED_BOUNDED_OWNER_OUTPUT",
+  "checkedAtUtc": "2026-10-08T20:18:49.839133+00:00",
+  "publishedLatest": {
+    "id": "TCUjgwTwpOlwz4T7J",
+    "buildNumber": "1.0.22",
+    "status": "SUCCEEDED",
+    "startedAt": "2026-10-08T20:10:57.584Z",
+    "finishedAt": "2026-10-08T20:11:55.901Z",
+    "usageTotalUsd": 0.012936222222222222
+  },
+  "all34SourceHashesVerified": true,
+  "protectedMetadataAndEnvironmentUnchanged": true,
+  "pricingChanged": false,
+  "sourceChangedFiles": [
+    "src/main.ts",
+    "README.md",
+    ".actor/input_schema.json"
+  ],
+  "inputSchemaSemanticChanges": false,
+  "localCompile": "PASS",
+  "syntheticMainRegression": {
+    "scenariosBeforeNavigationPatch": 13,
+    "baselineAndCandidateExecutions": 26,
+    "additionalNavigationScenarios": 3,
+    "additionalNavigationExecutions": 6,
+    "networkCalls": 0,
+    "scope": "Compiled actual main/helpers with simulated SDK, browser, DOM and storage."
+  },
+  "independentLocalBrowserChecks": {
+    "resourceHook": "PASS; matching images blocked while HTML/CSS/JS/XHR hydrate synthetic menu.",
+    "navigationReadiness": "PASS3cases; stalled ancillary iframe blocks load, DCL plus requiredselectors succeeds, missingmenu rejected.",
+    "realSourceAccessProvedByTheseChecks": false
+  },
+  "firstCandidateAttempt": {
+    "buildNumber": "1.0.21",
+    "platformStatus": "FAILED",
+    "menuRows": 0,
+    "resultEvents": 0,
+    "reason": "Initial page.goto waited for load and timed out45000ms; no challenge proved.",
+    "finalOwnerCostUsd": 0.0322185234904488
+  },
+  "boundedOwnerAcceptance": {
+    "ownerRunId": "IdauRHyrQmhIGFWN2",
+    "actorId": "dHYh0fcMQaXw4LS29",
+    "buildId": "TCUjgwTwpOlwz4T7J",
+    "buildNumber": "1.0.22",
+    "startedAt": "2026-10-08T20:15:26.941Z",
+    "finishedAt": "2026-10-08T20:17:17.782Z",
+    "platformStatus": "FAILED",
+    "applicationQualityStatus": "degraded",
+    "sourceRestaurant": "Sushi Yana",
+    "sourceRestaurantSlug": "sushi-yana-moabit",
+    "deliveredMenuRows": 107,
+    "unpricedSummaryRows": 1,
+    "requestFailures": 0,
+    "retries": 0,
+    "nullPriceRate": 0,
+    "stoppedBySpendingLimit": true,
+    "issues": [
+      "SPENDING_LIMIT_REACHED"
+    ],
+    "strictQualityFlag": true,
+    "resultEventCount": 107,
+    "automaticStartEventCount": 2,
+    "ownerAccountedResultEvents": 0,
+    "ownerAccountedStartEvents": 0,
+    "ownerCostUsd": 0.05014651470804546,
+    "costLinesSumUsd": 0.05014651470804546,
+    "residentialTransferGb": 0.004558216780424118,
+    "runTimeSeconds": 110.588,
+    "peakMemoryBytes": 1258418176,
+    "options": {
+      "build": "1.0.22",
+      "memoryMbytes": 2048,
+      "timeoutSecs": 180,
+      "maxTotalChargeUsd": 0.3
+    },
+    "modeledGrossAtRunEventRateUsd": 0.2989,
+    "ownerRevenueUsd": 0,
+    "incompleteMenu": true
+  },
+  "all107RowInspection": {
+    "status": "PASS_WITH_EXPLICIT_CAP_AND_FIELD_LIMITATIONS",
+    "buildNumber": "1.0.22",
+    "allMenuRowsInspected": 107,
+    "totalDatasetRows": 108,
+    "uniqueSourceIdentities": 107,
+    "checks": {
+      "namesAndRequiredIdentityFieldsPopulated": true,
+      "allPricesFiniteNonnegative": true,
+      "allCurrenciesEUR": true,
+      "allParsedPricesMatchFirstDisplayedEuroAmount": true,
+      "sameRequestedRestaurantAndObservationTime": true,
+      "directContextHasNullPostcodeAndSearchURL": true,
+      "historyDisabledAndEmpty": true,
+      "noUnexpectedRecordTypes": true,
+      "summaryAndDatasetMatch": true,
+      "summaryAnd107ResultEventsTieOut": true,
+      "requestFailuresRetriesAndNullPricesZero": true,
+      "onlyCapWarning": true,
+      "strictFlagExplainsFailedPlatformStatus": true,
+      "ownerAccountedEventsAllZero": true,
+      "nextResultWouldExceed030ChargeCap": true
+    },
+    "priceMinEur": 2,
+    "priceMaxEur": 74.95,
+    "multiplePriceTextRows": 9,
+    "repeatedSameNameAndPricePairs": 1,
+    "sameNameAndPriceDuplicateScope": "Single Salmon Menu (15 pieces) appears in Promotion and Menus with distinct sourceProductIds;107source identities are not107unique dishes.",
+    "ratingAndReviewCountZeroForAllRows": "Observed values0 were preserved; genuine absence or rating semantics were not independently verified.",
+    "incompleteCoverage": true,
+    "fullExtractedOrSourceMenuCountKnown": false,
+    "capGrossModelUsd": 0.2989,
+    "nextEventGrossModelUsd": 0.3016,
+    "peakMemoryBytes": 1258418176,
+    "recommendedReleaseScope": "Suitable for publishing the bounded technical fixes and dated sample; not a complete-menu, market-uptime, customer-satisfaction or general-profit guarantee."
+  },
+  "samples": [
+    {
+      "file": "10_2026-10-08_bounded_direct_menu_input.json",
+      "kind": "Exact bounded input; charge limit is a run option, not an input property."
+    },
+    {
+      "file": "11_2026-10-08_bounded_menu_sample.json",
+      "kind": "Three field-preserving projections from the dated owner dataset.",
+      "zeroBasedSourceIndices": [
+        0,
+        1,
+        106
+      ],
+      "fullOwnerDatasetPubliclyPublished": false
+    },
+    {
+      "file": "12_2026-10-08_bounded_run_summary.json",
+      "kind": "Exact free run summary/OUTPUT; cap degradation and strict failure retained."
+    }
+  ],
+  "limitations": [
+    "One direct restaurant and one bounded source acceptance do not prove general source reliability.",
+    "107delivered source identities do not prove107unique dishes or a complete menu.",
+    "Nine displayed price texts include two amounts; price is the first displayed amount, priceText preserves both.",
+    "Direct menu context does not establish postcode-specific delivery availability, fees or ETAs.",
+    "Strict failOnQualityIssues=true intentionally yields platformFAILED for the sole spending-cap warning; useful delivered rows remain accessible.",
+    "Owner accounted event counts0 are not customer revenue, payment or satisfaction.",
+    "The memory peak exceeded1GB; no lower-memory recommendation is validated by this fixture.",
+    "The successful technical acceptance did not validate history, analytics, webhooks or all retry paths against current source.",
+    "Source prices and availability are dated observations; do not treat them as present offers.",
+    "Publisher profit depends on paid-tier actual resource quantities and event revenue; no nonnegative margin guarantee."
+  ]
+}

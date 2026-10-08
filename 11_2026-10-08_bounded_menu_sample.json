@@ -1,0 +1,114 @@
+[
+  {
+    "recordType": "menu_item",
+    "observedAt": "2026-10-08T20:15:31.005Z",
+    "restaurantName": "Sushi Yana",
+    "restaurantSlug": "sushi-yana-moabit",
+    "category": "Promotion",
+    "productName": "Single Salmon Menu (15 pieces)",
+    "priceText": "13,93 €19,90 €",
+    "price": 13.93,
+    "priceCurrency": "EUR",
+    "isFromPrice": false,
+    "isAvailable": true,
+    "canonicalName": "single salmon menu",
+    "canonicalProductId": "de-menu-v3:35438ca50b071474785ef3b6",
+    "comparableProductId": "de-menu-v3:bb673764f8d893a9cc0c8130",
+    "normalizationConfidence": 0.81,
+    "normalizationVersion": "de-menu-v3",
+    "productAttributes": {
+      "sizeValue": null,
+      "sizeUnit": null,
+      "sizeKey": null,
+      "quantity": 15,
+      "dietary": [],
+      "variants": [
+        "menu",
+        "single"
+      ],
+      "semanticTokens": [
+        "menu",
+        "salmon",
+        "single"
+      ]
+    },
+    "priceHistory90d": [],
+    "priceChange90d": null,
+    "priceChangePercent90d": null,
+    "firstObservedAt": "2026-10-08T20:15:31.005Z",
+    "observationCount": 0
+  },
+  {
+    "recordType": "menu_item",
+    "observedAt": "2026-10-08T20:15:31.005Z",
+    "restaurantName": "Sushi Yana",
+    "restaurantSlug": "sushi-yana-moabit",
+    "category": "Gyoza",
+    "productName": "Vegetarian Gyoza (4 pcs)",
+    "priceText": "3,50 €",
+    "price": 3.5,
+    "priceCurrency": "EUR",
+    "isFromPrice": false,
+    "isAvailable": true,
+    "canonicalName": "vegetarian gyoza",
+    "canonicalProductId": "de-menu-v3:56c3c552e13e94af9ef59fe0",
+    "comparableProductId": "de-menu-v3:dae1bca544029255e520ba6b",
+    "normalizationConfidence": 0.79,
+    "normalizationVersion": "de-menu-v3",
+    "productAttributes": {
+      "sizeValue": null,
+      "sizeUnit": null,
+      "sizeKey": null,
+      "quantity": 4,
+      "dietary": [
+        "vegetarian"
+      ],
+      "variants": [],
+      "semanticTokens": [
+        "gyoza",
+        "vegetarian"
+      ]
+    },
+    "priceHistory90d": [],
+    "priceChange90d": null,
+    "priceChangePercent90d": null,
+    "firstObservedAt": "2026-10-08T20:15:31.005Z",
+    "observationCount": 0
+  },
+  {
+    "recordType": "menu_item",
+    "observedAt": "2026-10-08T20:15:31.005Z",
+    "restaurantName": "Sushi Yana",
+    "restaurantSlug": "sushi-yana-moabit",
+    "category": "Chop Suey",
+    "productName": "Chop Suey with Vegetables",
+    "priceText": "9,90 €",
+    "price": 9.9,
+    "priceCurrency": "EUR",
+    "isFromPrice": false,
+    "isAvailable": true,
+    "canonicalName": "chop suey with vegetables",
+    "canonicalProductId": "de-menu-v3:0507729af67b1c16295af20e",
+    "comparableProductId": "de-menu-v3:448b64c30f7e0408e35900cb",
+    "normalizationConfidence": 0.81,
+    "normalizationVersion": "de-menu-v3",
+    "productAttributes": {
+      "sizeValue": null,
+      "sizeUnit": null,
+      "sizeKey": null,
+      "quantity": null,
+      "dietary": [],
+      "variants": [],
+      "semanticTokens": [
+        "chop",
+        "suey",
+        "vegetables"
+      ]
+    },
+    "priceHistory90d": [],
+    "priceChange90d": null,
+    "priceChangePercent90d": null,
+    "firstObservedAt": "2026-10-08T20:15:31.005Z",
+    "observationCount": 0
+  }
+]

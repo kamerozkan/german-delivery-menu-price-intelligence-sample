@@ -8,7 +8,7 @@
     "postalCodes": {
       "title": "German postal codes",
       "type": "array",
-      "description": "Five-digit German postal codes. Each location is opened through Lieferando postcode-routed result pages. At the Free tier checked on 6 October 2026, delivered menu items, restaurant fallback rows and menu-change summaries cost $0.003 each. Matrices, inflation summaries and the run summary have no result event. Memory-based startup is separate; live Pricing is authoritative.",
+      "description": "Five-digit German postal codes. Each location is opened through Lieferando postcode-routed result pages. At the Free tier checked on 6 October 2026, delivered menu items, restaurant fallback rows and menu-change summaries cost $0.003 each. Matrices, inflation summaries and the run summary have no result event. Memory-based startup is separate; live Pricing is authoritative. For a direct-menu-only Console run, set this array to []. API requests containing restaurantUrls and omitting postalCodes do not add the default Berlin search.",
       "editor": "stringList",
       "default": [
         "10115"

@@ -24,3 +24,18 @@ The billing explanation was reconciled with the saved active event configuration
 ## October 6 lifecycle repair
 
 The same publication also changes runtime failure exits. Lifecycle QA used synthetic SDK, crawler and storage fixtures. No new source scrape, customer dataset, payment, satisfaction result or refund is claimed. Historical samples were preserved.
+
+## October 8 cost-control scope
+
+Resource-blocking, direct-only URL defaults, result-budget scheduling and navigation readiness were published in public latest 1.0.22. Local regression fixtures are synthetic and use no source traffic. A separate dated owner source acceptance is described below. Historical menu examples retain their original timestamps. Images matching the blocked patterns are omitted from network loading; their published source URLs are still extracted from the DOM. Documents, CSS, JavaScript and API responses are retained. The optimization is not a guarantee of source access, complete menus or profit. Known exhausted budgets prevent additional history writes, but concurrent history and delivery are not atomic. A later failure can retain prior delivered rows and automatic startup charges.
+
+## October 8 dated owner samples
+
+- `10_2026-10-08_bounded_direct_menu_input.json` preserves the exact one-restaurant owner input. History, analytics and notifications were disabled. No credential or personal account identifier is present in that input.
+- `11_2026-10-08_bounded_menu_sample.json` contains three field-preserving projections from source indices 0, 1 and 106 of the owner dataset, observed on October 8, 2026. The full private owner export was not copied into this repository.
+- These new projections omit source product IDs, full restaurant URLs, addresses, coordinates, image URLs, descriptions, rating/review and delivery fields. Product and restaurant names, dated prices, categories and generated normalization fields remain to demonstrate the output contract.
+- `12_2026-10-08_bounded_run_summary.json` preserves the exact summary: 107 menu rows, one restaurant, spending limit reached, quality degraded. Platform FAILED was caused by the strict quality flag and cap warning; it was not relabeled successful.
+- The sample does not prove complete source/menu coverage, 107 unique dishes, postcode delivery coverage, current prices, paid customer use, revenue, satisfaction or general profit. Accounted owner events were zero.
+- Multiple displayed price amounts and repeated source-category observations are retained honestly. A zero source rating or review count is not an independently authenticated absence of reviews.
+- Owner run/build identifiers in `runtime-verification-2026-10-08.json` provide dated provenance. API tokens, account IDs, private storage identifiers, full logs and the full raw dataset are not included.
+- Synthetic tests cover limited lifecycle and navigation paths. The source acceptance disabled history and analytics and does not freshly validate those features or integrations.
