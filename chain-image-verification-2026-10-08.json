@@ -1,0 +1,102 @@
+{
+  "status": "PUBLIC_LATEST_1.0.23_VERIFIED_WITH_ONE_HEALTHY_OWNER_MENU",
+  "publishedLatest": {
+    "id": "hfAW1S9wOWopLSWT7",
+    "buildNumber": "1.0.23",
+    "status": "SUCCEEDED",
+    "startedAt": "2026-10-08T20:34:18.810Z",
+    "finishedAt": "2026-10-08T20:34:54.150Z",
+    "usageTotalUsd": 0.00783288888888889
+  },
+  "publicationVerified": true,
+  "all34FrozenSourceHashesVerified": true,
+  "unchangedSourceFiles": 32,
+  "changedSourceFiles": [
+    "README.md",
+    "src/main.ts"
+  ],
+  "pricingSchemaMemoryProxyRetryAndEnvironmentUnchanged": true,
+  "change": "Skip unused DOM chain-image fallback when parsed structured image is non-nullish; retain previous nullish fallback and error behavior.",
+  "localValidation": {
+    "authorBranchCases": 9,
+    "actualBaselineAndCandidateMainExecutions": 18,
+    "independentSelectionCases": 60,
+    "compileAndTypecheck": "PASS",
+    "syntheticFixtureOutputParity": true
+  },
+  "ownerAcceptance": {
+    "runId": "Y6zN7x8dJeNrNawjC",
+    "buildId": "hfAW1S9wOWopLSWT7",
+    "buildNumber": "1.0.23",
+    "startedAt": "2026-10-08T20:35:07.685Z",
+    "finishedAt": "2026-10-08T20:37:35.153Z",
+    "platformStatus": "SUCCEEDED",
+    "applicationStatus": "healthy",
+    "requestedRestaurants": 1,
+    "menuRows": 308,
+    "availablePricedRows": 299,
+    "explicitUnavailableRows": 9,
+    "datasetRows": 309,
+    "chargedResultEvents": 308,
+    "automaticStartupEvents": 2,
+    "ownerAccountedEvents": {
+      "result-emitted": 0,
+      "apify-actor-start": 0
+    },
+    "requestFailures": 0,
+    "retries": 0,
+    "availableNullPriceRate": 0,
+    "spendingLimitReached": false,
+    "issues": [],
+    "runTimeSecs": 147.298,
+    "memoryMbytes": 2048,
+    "peakMemoryBytes": 1087528960,
+    "timeoutSecs": 180,
+    "maxTotalChargeUsd": 1,
+    "ownerResourceCostUsd": 0.055892032041054626,
+    "costLinesSumUsd": 0.05589203204105463
+  },
+  "inspection": {
+    "all308RowsInspected": true,
+    "fullDatasetExport": true,
+    "uniqueSourceIdentities": true,
+    "requiredFields": true,
+    "allAvailableHaveValidPrices": true,
+    "unavailableHaveExplicitTextAndNullPrice": true,
+    "unavailableCountsMatch": true,
+    "sharedBusinessFieldsUnchanged": true,
+    "sourceQualityHealthy": true,
+    "noSpendingCapCutoff": true,
+    "summaryAndEventsMatch": true,
+    "ownerAccountedZero": true,
+    "finalCostReconciled": true
+  },
+  "priorSnapshotComparison": {
+    "priorRows": 107,
+    "commonSourceIdentities": 106,
+    "absentPriorPromotionRows": 1,
+    "commonBusinessFieldsUnchanged": true,
+    "imageUrlChanges": 4,
+    "exactTemporalSnapshotParity": false,
+    "explanation": "Menu data is extracted before the modified image fallback. The cause of the missing promotional row and image differences in separate live sessions was not established."
+  },
+  "samples": {
+    "input": "13_2026-10-08_completed_menu_input.json",
+    "rowProjections": "14_2026-10-08_completed_menu_sample.json",
+    "sourceIndices": [
+      0,
+      254,
+      307
+    ],
+    "exactSummary": "15_2026-10-08_completed_menu_summary.json"
+  },
+  "limitations": [
+    "One healthy requested menu does not prove all menus, source uptime, independent exhaustive completeness, or customer satisfaction.",
+    "Owner accounted events0 are not customer revenue.",
+    "The prior run had a0.30USD charge cap and107rows; this1.00USD bounded run delivered308rows, so time/cost differences are not attributable solely to code.",
+    "Unavailable rows have null prices intentionally; no available row has a null or negative price.",
+    "Historical examples and their dates remain unchanged.",
+    "One prior promotion is absent and four image URLs differ; do not claim exact107row live parity.",
+    "History, analytics, digests and external notifications were disabled in this source test."
+  ]
+}

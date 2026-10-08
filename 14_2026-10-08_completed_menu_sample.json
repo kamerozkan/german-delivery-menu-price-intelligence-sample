@@ -1,0 +1,111 @@
+[
+  {
+    "recordType": "menu_item",
+    "observedAt": "2026-10-08T20:35:25.553Z",
+    "restaurantName": "Sushi Yana",
+    "restaurantSlug": "sushi-yana-moabit",
+    "category": "Menus",
+    "productName": "Salmon Menu (24 Pieces)",
+    "priceText": "19,90 €",
+    "price": 19.9,
+    "priceCurrency": "EUR",
+    "isFromPrice": false,
+    "isAvailable": true,
+    "canonicalName": "salmon menu",
+    "canonicalProductId": "de-menu-v3:c1a6efe89d5ff126216296c1",
+    "comparableProductId": "de-menu-v3:c1ee495890e2ee30dd25a209",
+    "normalizationConfidence": 0.79,
+    "normalizationVersion": "de-menu-v3",
+    "productAttributes": {
+      "sizeValue": null,
+      "sizeUnit": null,
+      "sizeKey": null,
+      "quantity": 24,
+      "dietary": [],
+      "variants": [
+        "menu"
+      ],
+      "semanticTokens": [
+        "menu",
+        "salmon"
+      ]
+    },
+    "priceHistory90d": [],
+    "priceChange90d": null,
+    "priceChangePercent90d": null,
+    "firstObservedAt": "2026-10-08T20:35:25.553Z",
+    "observationCount": 0
+  },
+  {
+    "recordType": "menu_item",
+    "observedAt": "2026-10-08T20:35:25.553Z",
+    "restaurantName": "Sushi Yana",
+    "restaurantSlug": "sushi-yana-moabit",
+    "category": "Desserts",
+    "productName": "Japanese Pancake",
+    "priceText": "Unavailable",
+    "price": null,
+    "priceCurrency": "EUR",
+    "isFromPrice": false,
+    "isAvailable": false,
+    "canonicalName": "japanese pancake",
+    "canonicalProductId": "de-menu-v3:16e484ab2453b79ad9ba20df",
+    "comparableProductId": "de-menu-v3:e936afed6271682da5fd5fdb",
+    "normalizationConfidence": 0.79,
+    "normalizationVersion": "de-menu-v3",
+    "productAttributes": {
+      "sizeValue": null,
+      "sizeUnit": null,
+      "sizeKey": null,
+      "quantity": null,
+      "dietary": [],
+      "variants": [],
+      "semanticTokens": [
+        "japanese",
+        "pancake"
+      ]
+    },
+    "priceHistory90d": [],
+    "priceChange90d": null,
+    "priceChangePercent90d": null,
+    "firstObservedAt": "2026-10-08T20:35:25.553Z",
+    "observationCount": 0
+  },
+  {
+    "recordType": "menu_item",
+    "observedAt": "2026-10-08T20:35:25.553Z",
+    "restaurantName": "Sushi Yana",
+    "restaurantSlug": "sushi-yana-moabit",
+    "category": "Non-alcoholic Drinks",
+    "productName": "Elephant Bay 0.33l Green Tea",
+    "priceText": "Unavailable",
+    "price": null,
+    "priceCurrency": "EUR",
+    "isFromPrice": false,
+    "isAvailable": false,
+    "canonicalName": "elephant bay green tea",
+    "canonicalProductId": "de-menu-v3:f63e2d0ffb5cf3217f0423fe",
+    "comparableProductId": "de-menu-v3:2ea191ee77143da3d2670821",
+    "normalizationConfidence": 0.82,
+    "normalizationVersion": "de-menu-v3",
+    "productAttributes": {
+      "sizeValue": 330,
+      "sizeUnit": "ml",
+      "sizeKey": "330ml",
+      "quantity": null,
+      "dietary": [],
+      "variants": [],
+      "semanticTokens": [
+        "bay",
+        "elephant",
+        "green",
+        "tea"
+      ]
+    },
+    "priceHistory90d": [],
+    "priceChange90d": null,
+    "priceChangePercent90d": null,
+    "firstObservedAt": "2026-10-08T20:35:25.553Z",
+    "observationCount": 0
+  }
+]

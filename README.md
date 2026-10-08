@@ -7,8 +7,8 @@ Scrape restaurant menus and dish prices from Lieferando.de, Germany's largest fo
 [Run Lieferando Menu Scraper - Restaurant Menus, Prices & Delivery on Apify](https://apify.com/kamerozkan/german-delivery-menu-price-intelligence)
 
 ![Actor](https://img.shields.io/badge/Apify_Actor-public-00a67e)
-![Latest build](https://img.shields.io/badge/latest_build-1.0.22-2563eb)
-![Sample evidence](https://img.shields.io/badge/owner_sample-capped-f59e0b)
+![Latest build](https://img.shields.io/badge/latest_build-1.0.23-2563eb)
+![Sample evidence](https://img.shields.io/badge/owner_sample-one_menu_healthy-00a67e)
 ![Schema](https://img.shields.io/badge/JSON_Schema-draft--07-f59e0b)
 
 Turn postcode-routed Lieferando restaurant listings into normalized menu rows, delivery economics, comparable product IDs, cross-postcode price matrices, 90-day history, and run-quality records.
@@ -24,9 +24,21 @@ Delivered menu items, restaurant fallback rows and menu-change summary rows cost
 
 See [`pricing-verification-2026-10-06.json`](pricing-verification-2026-10-06.json) for the saved event configuration and scope.
 
-## October 8, 2026 publication and bounded owner output
+## October 8, 2026: completed one-menu owner check
 
-Public `latest` is `1.0.22`, build `TCUjgwTwpOlwz4T7J`. All 34 frozen source hashes and protected settings were verified. Event prices, retry defaults, proxy settings, input constraints and memory defaults were preserved. Initial navigation now waits for `domcontentloaded`, followed by the required visible content checks.
+Public `latest` is `1.0.23`, build `hfAW1S9wOWopLSWT7`. The only runtime change skips the unused DOM image lookup when a structured JSON-LD image is already available. The fallback still runs when needed. All 34 frozen source hashes were verified; 32 source files are identical to 1.0.22. Prices, schemas, memory, proxy, retries and required-content checks are unchanged.
+
+One dated direct-menu owner run completed with **308 menu records**, `SUCCEEDED` platform status and `healthy` application quality. It contains 299 available items with finite nonnegative EUR prices and nine explicitly unavailable items with null prices. Source failures, retries and available-item missing-price rate were zero. The run did not hit its charge limit. This is one observed menu, not an independently exhaustive source-coverage or uptime guarantee.
+
+The exact input is [`13_2026-10-08_completed_menu_input.json`](13_2026-10-08_completed_menu_input.json). Use `postalCodes: []` for direct-only collection. The dated run options were 2 GB, 180 seconds and `maxTotalChargeUsd: 1.00`; the charge limit is a run option, not an input field or publisher resource-cost cap. A smaller budget may intentionally stop before the menu finishes. Requested history and analytics should remain enabled when those features are needed; this sample requests neither.
+
+See [`14_2026-10-08_completed_menu_sample.json`](14_2026-10-08_completed_menu_sample.json) for three field-preserving projections, including an unavailable item, and [`15_2026-10-08_completed_menu_summary.json`](15_2026-10-08_completed_menu_summary.json) for the exact summary. The owner resource cost was USD 0.0558920. All accounted owner events were zero; this is not customer revenue or a customer profit result.
+
+Local checks covered nine branches with 18 actual compiled baseline/candidate executions and 60 independent selection cases. Synthetic dataset, summary and identity parity passed. In the two live snapshots, 106 prior source identities and their non-image business fields match; one previous promotional row was absent and four shared image URLs changed. Their live source/session cause was not established. Menu extraction occurs before the modified fallback. Do not describe the live snapshots as identical, or attribute their different row counts, runtime or costs solely to this change. Full evidence and limitations are in [`chain-image-verification-2026-10-08.json`](chain-image-verification-2026-10-08.json).
+
+## Earlier October 8, 2026 capped owner output
+
+At that earlier publication, public `latest` was `1.0.22`, build `TCUjgwTwpOlwz4T7J`. All 34 frozen source hashes and protected settings were verified. Event prices, retry defaults, proxy settings, input constraints and memory defaults were preserved. Initial navigation now waits for `domcontentloaded`, followed by the required visible content checks.
 
 A dated owner acceptance collected 107 menu rows from Sushi Yana plus one free run-summary row on October 8. Every delivered row has a product name, source identity and finite EUR price; observed prices ranged from EUR 2.00 to EUR 74.95. No failed source request, retry or missing price was recorded. This is one restaurant's bounded snapshot, not a complete menu or a general availability guarantee.
 

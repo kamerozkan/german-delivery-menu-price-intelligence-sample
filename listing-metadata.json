@@ -8,7 +8,7 @@
   "isPublic": true,
   "url": "https://apify.com/kamerozkan/german-delivery-menu-price-intelligence",
   "checkedAt": "2026-10-08",
-  "changeScope": "Cost controls, directURL defaults and navigation readiness; bounded dated owner output",
+  "changeScope": "Quality-preserving chain-image fallback optimization and dated completed owner menu",
   "runtimeChanged": true,
   "schemasChanged": false,
   "examplesRegenerated": true,
@@ -18,18 +18,18 @@
   "pricingVerificationFile": "pricing-verification-2026-10-06.json",
   "maintenanceCheckedAt": "2026-10-08",
   "publishedLatestBuild": {
-    "id": "TCUjgwTwpOlwz4T7J",
-    "buildNumber": "1.0.22",
+    "id": "hfAW1S9wOWopLSWT7",
+    "buildNumber": "1.0.23",
     "status": "SUCCEEDED",
-    "startedAt": "2026-10-08T20:10:57.584Z",
-    "finishedAt": "2026-10-08T20:11:55.901Z",
-    "usageTotalUsd": 0.012936222222222222
+    "startedAt": "2026-10-08T20:34:18.810Z",
+    "finishedAt": "2026-10-08T20:34:54.150Z",
+    "usageTotalUsd": 0.00783288888888889
   },
-  "maintenanceEvidenceFile": "runtime-verification-2026-10-08.json",
+  "maintenanceEvidenceFile": "chain-image-verification-2026-10-08.json",
   "pricingConfigurationChanged": false,
   "storePublicationBlocked": false,
-  "publicationScope": "Verified public cloud release; prepared linked GitHub samples awaiting root push",
-  "maintenanceChangeScope": "Resource URL blocking, direct-only scheduling, known spending-cap stop and DCL navigation with requiredselectors",
+  "publicationScope": "Verified public cloud release with one healthy owner menu; linked GitHub evidence",
+  "maintenanceChangeScope": "Only unused structured-image DOM fallback wait removed;32other source files identical",
   "lifecycleEvidenceFile": "lifecycle-verification-2026-10-06.json",
   "inputSchemaDocumentationChanged": true,
   "inputSchemaConstraintsChanged": false,
@@ -45,6 +45,6 @@
     "usefulMenuRows": 0,
     "resultEvents": 0
   },
-  "datedOwnerSampleStatus": "INCOMPLETE_CAPPED_MENU_SNAPSHOT",
+  "datedOwnerSampleStatus": "ONE_REQUESTED_MENU_HEALTHY_308_ROWS",
   "customerOutputOrMarginVerified": false
 }

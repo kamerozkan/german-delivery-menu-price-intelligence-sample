@@ -39,3 +39,9 @@ Resource-blocking, direct-only URL defaults, result-budget scheduling and naviga
 - Multiple displayed price amounts and repeated source-category observations are retained honestly. A zero source rating or review count is not an independently authenticated absence of reviews.
 - Owner run/build identifiers in `runtime-verification-2026-10-08.json` provide dated provenance. API tokens, account IDs, private storage identifiers, full logs and the full raw dataset are not included.
 - Synthetic tests cover limited lifecycle and navigation paths. The source acceptance disabled history and analytics and does not freshly validate those features or integrations.
+
+## October 8 completed-menu owner check
+
+The later 1.0.23 check used one restaurant and a USD 1.00 run charge limit, with the same input feature scope as the earlier capped sample. It delivered 308 records, including nine explicitly unavailable items. File 13 is the exact input; file 14 contains only three field-preserving projections from indices 0, 254 and 307; file 15 is the exact run summary. The same omitted fields and privacy limits apply. The full raw dataset and account/storage identifiers are not published.
+
+The prior 107-row sample remains unchanged. This newer session shared 106 of those source identities; one promotional row was absent and four image URLs differ. Exact live-snapshot parity and the cause of those differences were not proved. The changed fallback executes after menu extraction. Synthetic checks establish narrow code parity, not universal current source correctness. Owner accounted events were zero. One healthy source check is not customer adoption, satisfaction or a general margin guarantee.
